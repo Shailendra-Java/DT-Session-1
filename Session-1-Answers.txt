@@ -1,0 +1,244 @@
+1)    Can abstract class have constructors in Java?
+
+Ans :- Yes we can define constructors in an abstract class.
+
+2)  Can abstract class implements interface in Java? do they require to implement all methods?
+
+Ans :- Yes abstract class can implement interface in java and there is no requirement to implement
+	all methods of interface.
+		
+3)  Can abstract class be final in Java?
+
+Ans :- No because final classes can't be inherrited. Where as for abstract class we should create 
+	child class to provide implementation.
+		
+4)  Can abstract class have static methods in Java?
+
+Ans :- Yes we can create static methods in abstract class but without abstract keyword.
+
+5)  Can you create instance of abstract class?
+
+Ans :- No we can't create instance of abstract class because there is no implementation of methods.
+
+6)  Is it necessary for abstract class to have abstract method?
+
+Ans :- No it is not necessary to have abstract methods in an abstract class.
+
+7)  Difference between abstract class and interface in Java?
+
+Ans :- Abstract Class :
+		a) We can define constructors in an abstract classes.
+		b) It is not necessary to have abstract methods.
+		c) Methods can have access modifiers as public, private, protected and static.
+		d) We can run abstract class if it has main method.
+		
+		Interface :
+		 a) We can't define constructors in a interface.
+		 b) In interface all methods are public abstract by default.
+		 c) Methods are public abstract by default so we can't use any other modifiers with methods.
+		 d) We can't run interface because it doesn't have implementation of methods.
+		 
+8)  When do you favor abstract class over interface?
+
+Ans :- When we wants to achieve partial abstraction then we can use abstract classes.
+	But to achieve 100% abstraction then we have to use   interfaces.
+		
+9)  What is abstract method in Java?
+
+Ans :- A abstract method is a method which is declared by abstract modifier and doesn't have
+	method body.
+		
+10) Can abstract class contains main method in Java ?
+
+Ans :- Yes abstract class can have main method.
+
+11) what is static block in java?
+
+Ans :- Static block is used for initializing the static variables and gets executed when class
+	is loaded.
+		
+12)  What is the need of static block?
+
+Ans :- Static block is used for initializing the static variables.
+
+13)  Can we overload static methods in java?
+
+Ans :- No we can't overload static method in java. Because these are associated with class
+	not to instance of that class.
+		
+14)  Can we call super class static methods from sub class?
+
+Ans :- Yes we can call super class static methods from sub class by using SuperClass.Method();
+
+15)What is the difference between final and static keywords?
+
+Ans :- Static belongs to the class not an instance this means that there is only one 
+	copy of that variable/method shared between all instances of a particular Class.
+	Where as final means the values once assigned cannot be modified.
+		
+16) Write a note on covariant return type with example code.
+
+Ans :- The covariant return type specifies that the return type may vary in the same direction 
+	as the subclass.
+		
+		class A{  
+			A get(){return this;}  
+		}  
+  
+		class B1 extends A{  
+			B1 get(){return this;}  
+				void message(){System.out.println("welcome to covariant return type");}  
+  
+			public static void main(String args[]){  
+				new B1().get().message();  
+			}  
+		}  
+		
+17) Write a note on Enum with example code.
+
+Ans :- Enum in java is a data type that contains fixed set of constants.
+
+		class EnumDemo{  
+			public enum Season { WINTER, SPRING, SUMMER, FALL }  
+  
+			public static void main(String[] args) {  
+				for (Season s : Season.values())  
+					System.out.println(s);  
+  
+			}
+		}
+		
+18) Write a note on use of super keyword and super() method.
+
+Ans :- The super keyword in java is a reference variable which is used to refer immediate parent class object.
+	Whenever you create the instance of subclass, an instance of parent class is created implicitly which is 
+	referred by super reference variable.
+		
+19)  Write a code to implement abstraction using interface.
+
+Ans :- 	interface ElectronicDevices{
+			public abstract void turnOn();
+			public abstract void turnOff();
+		}
+		class Television implements ElectronicDevices{
+			@Override
+			public void turnOn(){
+				System.out.println("Turn ON");
+			}
+			
+			@Override
+			public void turnOff(){
+				System.out.println("Turn OFF");
+			}
+		}
+		
+20)	Write a Java program to sort a numeric array and a string array.
+
+Ans :- 		import java.util.Arrays; 
+		public class Demo {
+			public static void main(String[] args){   
+    
+				int[] my_array1 = {
+					89, 20, 19, 14, 26, 
+					58, 258, 14, 12, 23, 
+					16, 21, 57, 26
+				};
+				
+				String[] my_array2 = {
+					"Java",
+					"Python",
+					"PHP",
+					"C#",
+					"C Programming",
+					"C++"
+				};        
+				Arrays.sort(my_array1);
+				System.out.println("Sorted numeric array : "+Arrays.toString(my_array1));
+		
+				Arrays.sort(my_array2);
+				System.out.println("Sorted string array : "+Arrays.toString(my_array2));
+			}
+		}
+		
+21)	Write a Java program to sum values of an array.
+
+Ans :- 		class SumOfArray{
+			int[] num = {11,22,33,44,55,66,77};
+			
+			public void sum(){
+				int sum = 0;
+				for(int i: num){
+					sum += i;
+				}
+				System.out.println(sum);
+			}
+		}
+		
+22)	Write a Java program to remove a specific element from an array.
+
+Ans :-	 	import java.util.Scanner;
+		class DeleteElementFromArray{
+			int[] num = {11,22,33,44,55,66,77};
+			
+			public void delete(){
+				int element;
+				Scanner scan = new Scanner(System.in);
+				System.out.println("Enter element to be delete");
+				element = scan.nextInt();
+				
+				for(int i=0; i<7; i++){
+						if(num[i] == element)
+						{
+							for(int j = i+1; j < 7; j++){
+								a[j-1] = a[j];
+							}
+							break;
+						}
+				}
+				System.out.println("Element deleted");
+			}
+		}
+
+23)	Write a Java program to reverse an array of integer values.
+
+Ans :-		class ReverseArray{
+			int[] num = {11,22,33,44,55,66,77};
+			
+			public void sum(){
+				for(int i=6; i>=0; i--){
+					System.out.print(num[i]+" ");
+				}
+			}
+		}
+		
+24)	Write a Java program to find the duplicate values of an array of integer values.
+
+Ans :- 		import java.util.*; 
+		public class DuplicateElements {
+			public static void main(String args[]) {
+				int i;
+				int[] inputArray = new int[10];
+				Map<Integer,Integer> map = new HashMap<Integer, Integer>();
+				Scanner scan = new Scanner(System.in);
+		   
+				System.out.println("Enter 10 elements");
+				for(i = 0; i < 10; i++) {
+					inputArray[i] = scan.nextInt();
+				}
+				for(Integer val: inputArray){
+					if(map.containsKey(val)){
+						map.put(val, map.get(val)+1);
+					} else {
+						map.put(val, 1);
+					}
+				}
+				System.out.println("Duplicate Elements\n");
+				Set<Integer> keys = map.keySet();
+				for (Integer key : keys){
+					if(map.get(key) > 1){
+						System.out.print(key + " ");
+					}
+				}
+ 
+			}
+		}

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Product Page</title>
+		<style type="text/css">
+			#lgn{
+				width: 40%;
+				height:400px;
+				border:solid 1px;
+				margin-left:30%;
+				margin-right:30%;
+				margin-top:8%;
+				background:#fdfdfd;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="lgn">
+			<center><h1>Product Details</h1>
+			<form name="productform" action="ProductDisplay.html" method="get">
+				<label>Product ID</label>
+				<input type="text" name="pID" placeholder="Product ID" required /> <br><br>
+				<label>Product Name</label>
+				<input type="text" name="pName" placeholder="Product Name" required /><br><br>
+				<label>Product Price</label>
+				<input type="text" name="pPrice" placeholder="Product Price" required /> <br><br>
+				<label>Product Quantity</label>
+				<input type="text" name="pQuantity" placeholder="Product Quantity" required /><br><br>
+				<input type="submit" value="Submit" style="width:100px"/></center>
+			</form>
+		</div>
+	</body>
+</html>

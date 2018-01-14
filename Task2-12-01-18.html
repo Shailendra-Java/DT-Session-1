@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<SCRIPT type="text/javascript" src="jquery-1.9.1.js"/>
+		<script>
+			$(document).ready(function(){
+				$('#btn2').click(function(){
+				$('p').toggle();
+				});
+			});
+
+			$(document).ready(function(){
+			$("#btn1").click(function () {
+			alert('Hello');
+				$("#img1").width(500).height(300);
+				$("#img1").css('opacity','0.5');
+			});
+			}); 
+		</script>
+		<style>
+			#img1{width:300px; height:200px;}
+		</style>
+	</head>
+	<body>
+		<div style="float:left; display:inline-block; ">
+        <span style="float:left;width: 40%;">
+            <img src="lion.jpg" id="img1"/>
+        </span>
+        <span style="float:right;width: 50%;">
+            <p style="float:right; display:block;">The lion has fascinated the human beings ever since the prehistoric times. 
+			It epitomizes the supremacy in the animal kingdom and the man has always been immensely proud to win over 
+			the lion.
+			No doubt, the lion is the most famous, powerful and a big creature in the cat family. He is a symbol of royalty, 
+			beauty, and power.
+            </p>
+        </span>
+		
+		</div>
+		<span style="width:300px; float:left;">
+			<Button id="btn1" name="btn1" >Button 1</button>
+		</span>
+		<span style="width:300px; float:right;">
+			<Button id="btn2" name="btn2" >Button 2</button>
+		</span>
+	</body>
+</html>
